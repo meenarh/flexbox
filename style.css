@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+}
+
+.soft-links {
+    display: inline-block;
+    color: #0169b2;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 10px;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+}
+
+.active{
+    background-color: #0169b2;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+header .logo{
+    position: relative;
+    color: #ff5e8e;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.softnav-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+#softcehck {
+    display: none;
+}
+
+#softcehck:checked+ul.main-nav {
+    display: block;
+}
+
+.content{
+    position: relative;
+}
+
+.content .textBox{
+    position: relative;
+    max-width: 550px;
+}
+
+.content .textBox h2{
+    color: #0169b2;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+.content .textBox p{
+    color: #333;
+    font-size: 1.3em;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #ff5e8e;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.social{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a .fa{
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    color: #ff5e8e;
+    background: #0169b2;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.social li a img{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+.social li a:hover{
+    background: #ff5e8e;
+    transform: translateY(-10px);
+}
+
+.mosque{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 700px;
+    height: 80%;
+}
+
+
+/* Rotate the first bar 
+.change .bar1{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out second bar 
+.change .bar2{
+    opacity: 0;
+}
+
+/* Rotate last bar 
+.change .bar3{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+*/
+/* responsiveness */
+
+@media(max-width: 991px){
+     section{
+         padding: 150px 20px;
+     }
+
+     header{
+         padding: 20px;
+     }
+
+     .navigation{
+         display: none;
+     }
+
+    }
+
+    
+@media screen and (min-width: 768px) {
+    .softnav {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
+    #softcehck:checked+ul.main-nav {
+        display: flex;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .soft-links {
+        margin-left: 40px;
+    }
+
+    .softnav-toggle {
+        display: block;
+    }
+
+    .soft-links:hover {
+        background-color: #0169b2;
+        color: #fff;
+        border-radius: 30px;
+    }
+}
